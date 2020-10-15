@@ -15,16 +15,14 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension timonwong.shellcheck
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-python.anaconda-extension-pack
 
+
+# Javascript
 # https://github.com/kamleshchandnani/vscode-js-extension-pack
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension 	PKief.material-icon-theme
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension 	vscode-icons-team.vscode-icons
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dbaeumer.vscode-eslint
-
-# Javascript
-
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension eg2.vscode-npm-script
-
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension baeumer.vscode-eslint
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension christian-kohler.npm-intellisense
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension Orta.vscode-jest
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension esbenp.prettier-vscode
@@ -32,8 +30,11 @@ fi
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension hnw.vscode-auto-open-markdown-preview
 
+# Git
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension eamodio.gitlens
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension donjayamanne.githistory
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension github.vscode-pull-request-github
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension gbierner.markdown-preview-github-styles
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension 	ms-azuretools.vscode-docker
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension 	aaron-bond.better-comments
@@ -59,21 +60,30 @@ fi
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension naumovs.theme-oceanicnext
 
-
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension kisstkondoros.vscode-codemetrics
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension msjsdiag.debugger-for-chrome
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension kisstkondoros.vscode-gutter-preview
 
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension techer.open-in-browser
-
 # AWS
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension AmazonWebServices.aws-toolkit-vscode
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dsteenman.cloudformation-yaml-snippets
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension HashiCorp.terraform
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension kddejong.vscode-cfn-lint
 
 # Peer Programming
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extensionMS-vsliveshare.vsliveshare
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension karigari.chat
+
+# Atlassian Jira and Bitcucket
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension atlassian.atlascode
+
+#Jenkins Pipelines
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension janjoerke.jenkins-pipeline-linter-connector
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension jenkinsxio.vscode-jx-tools
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dave-hagedorn.jenkins-runner
+
+#OpenAPI
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  arjun-g/vs-swagger-viewer
