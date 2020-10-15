@@ -87,3 +87,15 @@ fi
 
 #OpenAPI
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  arjun-g/vs-swagger-viewer
+
+#Azure
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  ms-vscode.vscode-node-azure-pack
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  vsciot-vscode.azure-iot-toolkit
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  ms-azuretools.vscode-azureterraform
+
+# C#
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  ms-dotnettools.csharp
+
+# Json / XML
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  nickdemayo.vscode-json-editor
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  dotjoshjohnson.xml
