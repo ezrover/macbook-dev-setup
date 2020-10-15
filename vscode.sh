@@ -15,6 +15,8 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension timonwong.shellcheck
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-python.anaconda-extension-pack
 
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ecmel.vscode-html-css
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension mrmlnc.vscode-scss
 
 # Javascript
 # https://github.com/kamleshchandnani/vscode-js-extension-pack
@@ -29,6 +31,8 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension GraphQL.vscode-graphql
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension hnw.vscode-auto-open-markdown-preview
+# https://github.com/auchenberg/vscode-browser-preview
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension auchenberg.vscode-browser-preview
 
 # Git
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension eamodio.gitlens
