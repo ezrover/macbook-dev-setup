@@ -99,3 +99,14 @@ fi
 # Json / XML
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  nickdemayo.vscode-json-editor
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  dotjoshjohnson.xml
+
+# Bitbucket Pull Requests
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  CodeStream.codestream
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  streetsidesoftware.code-spell-checker
+
+# productivity
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  mikestead.dotenv
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  gitignore
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  tomoki1207.pdf
+
+
