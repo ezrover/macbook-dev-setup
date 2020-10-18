@@ -15,13 +15,28 @@ source webdev.sh
 source tools.sh
 
 source aws.sh
-source android.sh
 
-source go.sh
+read -p "Do you wish to install AndroidStudio (Please answer yes or no)?  " yn
+case $yn in
+    [Yy]* ) source android.sh;;
+    [Nn]* ) continue;;
+    * ) echo "Please answer yes or no.";;
+esac
+
+read -p "Do you wish to change GO language (Please answer yes or no)?  " yn
+case $yn in
+    [Yy]* ) source go.sh;;
+    [Nn]* ) continue;;
+    * ) echo "Please answer yes or no.";;
+esac
 
 source vscode.sh
 
+read -p "Do you wish to change OSX Preferences (Please answer yes or no)?  " yn
+case $yn in
+    [Yy]* ) source osx-prefs.sh;;
+    [Nn]* ) continue;;
+    * ) echo "Please answer yes or no.";;
+esac
+
 source summary.sh
-
-#source osx-prefs.sh
-

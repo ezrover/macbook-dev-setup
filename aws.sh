@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
 if test ! $(which aws); then
-# Install AWS SDK
-echo "------------------------------"
-echo "Setting up AWS."
-brew install awscli
-pip3 install awscli --upgrade
+    # Install AWS SDK
+    echo "------------------------------"
+    echo "Setting up AWS."
+    brew install awscli
 
-aws --aws --version
+    aws --aws --version
+else 
+    brew upgrade awscli
+    aws --aws --version
 fi
 
 # install and setup gimme-aws-creds

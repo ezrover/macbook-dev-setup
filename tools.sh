@@ -114,16 +114,16 @@ if has_command "brew"; then
   fi
 fi
 
-if has_command "zsh"; then
-  if ! has_path ".oh-my-zsh"; then
-    get_consent "Install oh-my-zsh"
-    if has_consent; then
-      e_pending "Installing oh-my-zsh"
-      sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-      test_path ".oh-my-zsh"
-    fi
-  fi
-fi
+#if has_command "zsh"; then
+#  if ! has_path ".oh-my-zsh"; then
+#    get_consent "Install oh-my-zsh"
+#    if has_consent; then
+#      e_pending "Installing oh-my-zsh"
+#      sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#      test_path ".oh-my-zsh"
+#    fi
+#  fi
+#fi
 
 if has_command "brew" && has_command "zsh"; then
   if ! has_brew "powerlevel10k"; then
@@ -164,7 +164,7 @@ if has_command "brew" && has_command "zsh"; then
 fi
 
 ZSH_DISABLE_COMPFIX="true"
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 # Make the Homebrew copy of zsh your default shell
 chsh -s /usr/local/bin/zsh

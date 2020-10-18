@@ -37,7 +37,6 @@ fi
 # Git
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension eamodio.gitlens
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension donjayamanne.githistory
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension github.vscode-pull-request-github
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension gbierner.markdown-preview-github-styles
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension 	ms-azuretools.vscode-docker
@@ -55,19 +54,19 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vscjava.vscode-java-debug
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vscjava.vscode-maven
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vscjava.vscode-java-test
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vscjava.vscode-java-dependency
+# https://code.visualstudio.com/docs/java/java-tutorial#_coding-pack-for-java
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vscjava.vscode-java-pack
+
+
+
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vsciot-vscode.vscode-arduino
-
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension hbrok.markdown-preview-bitbucket
-
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension techer.open-in-browser
-
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension naumovs.theme-oceanicnext
-
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension kisstkondoros.vscode-codemetrics
-
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension msjsdiag.debugger-for-chrome
-
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension kisstkondoros.vscode-gutter-preview
 
 # AWS
@@ -105,7 +104,9 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  dotjoshjohnson.xml
 
 # Bitbucket Pull Requests
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  CodeStream.codestream
+# https://marketplace.visualstudio.com/items?itemName=RamiroBerrelleza.bitbucket-pull-requests
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension RamiroBerrelleza.bitbucket-pull-requests
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension github.vscode-pull-request-github
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  streetsidesoftware.code-spell-checker
 
 # productivity
