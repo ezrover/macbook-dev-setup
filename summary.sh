@@ -23,7 +23,6 @@ test_command "git-flow"
 test_command "zsh"
 test_command "node"
 test_command "n"
-test_command "nvm"
 test_command "yarn"
 test_command "npm"
 test_app "Sketch"
@@ -35,7 +34,6 @@ e_success "Optimization commands"
 echo "\r"
 
 e_settled "Installation complete!"
-
 
 # Remove outdated versions from the cellar.
 brew cleanup

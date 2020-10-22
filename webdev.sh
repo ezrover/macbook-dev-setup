@@ -1,23 +1,37 @@
 #!/usr/bin/env bash
 
 if test ! $(which node); then
-# Install npm
-brew  install node
+  # Install npm
+  brew install node
 fi
 
 if test ! $(which npm); then
   # Install npm
-  brew  install npm
+  brew install npm
 
   npm install -g coffeescript
   npm install -g grunt-cli
   npm install -g jshint
   npm install -g less
   npm install -g jest
+
+  #functional programming tools for javascript
+  # https://monet.github.io/monet.js/
+  npm install monet --save
 else
   e_pending "Upgrading npm"
   npm i -g npm@latest
   test_command "npm"
+
+  npm upgrade coffeescript
+  npm upgrade grunt-cli
+  npm upgrade jshint
+  npm upgrade less
+  npm upgrade jest
+
+  #functional programming tools for javascript
+  # https://monet.github.io/monet.js/
+  npm upgrade monet --save
 fi
 
 if test ! $(which eslint); then
@@ -31,29 +45,22 @@ if test ! $(which eslint); then
     test_command "eslint"
     test_command "prettier"
   fi
+else
+  brew upgrade npm
 fi
-
 
 if test ! $(which n); then
   e_pending "Installing n"
   brew install n
   test_command "n"
+else
+  brew upgrade n
 fi
-
-
-if test ! $(which nvm); then
-  e_pending "Installing nvm"
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-  test_command "nvm"
-fi
-
 
 if test ! $(which yarn); then
   e_pending "Installing yarn (with Node)"
   brew install yarn
   test_command "yarn"
+else
+  brew upgrade yarn
 fi
-
-
-
-

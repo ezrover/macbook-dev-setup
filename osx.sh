@@ -13,6 +13,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 defaults write com.apple.finder AppleShowAllFiles YES
+killall Finder
 
 # Set computer name (as done via System Preferences → Sharing)
 #sudo scutil --set ComputerName "0x6D746873"
@@ -35,6 +36,16 @@ sudo softwareupdate -ia --verbose
 # Install only recommended available updates
 #sudo softwareupdate -ir --verbose
 
+#many tools require java preinstalled
+
+
+if test ! $(which java); then
+    # Install Java since most apps require it
+  brew tap adoptopenjdk/openjdk
+  brew cask install adoptopenjdk
+else
+  brew upgrade --cask adoptopenjdk
+fi
 
 
 if [[ ! -d "/Applications/Xcode.app" ]]; then
@@ -95,11 +106,6 @@ do
     esac
   fi
 done
-
-if test ! $(which java); then
-    # Install Java since most apps require it
-    brew cask install adoptopenjdk
-fi
 
 if test ! $(which git); then
 # Install git App

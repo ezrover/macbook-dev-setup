@@ -1,21 +1,28 @@
 #!/usr/bin/env bash
 
+brew tap homebrew/cask
 
 if [[ ! -d "/Applications/IntelliJ IDEA CE.app" ]]; then
-# IntelliJ IDEA Ultimate Edition
-brew cask install intellij-idea-ce
+    # IntelliJ IDEA Ultimate Edition
+    brew cask install --appdir /Applications intellij-idea-ce
 fi
 
 if [[ ! -d "/Applications/Android Studio.app" ]]; then
-brew cask install android-studio
+    brew cask install --appdir /Applications android-studio
+    brew cask install android-sdk
+    brew cask install android-ndk
+else
+    brew upgrade --cask --appdir /Applications android-studio
+    brew upgrade --cask android-sdk
+    brew upgrade --cask android-ndk
 fi
 
-brew cask install android-sdk
-brew cask install android-ndk
-
-if test ! $(which maven); then
-# Install maven
-brew install maven
+if test ! $(which mvn); then
+    # Install maven
+    brew install maven
+else
+    brew upgrade maven
 fi
 
-export ANDROID_HOME=/usr/local/share/android-sdk
+echo "export ANDROID_HOME=/usr/local/share/android-sdk" >>~/.zshrc
+source ~/.zshrc

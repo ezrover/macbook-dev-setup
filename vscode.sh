@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 if [[ ! -d "/Applications/Visual Studio Code.app" ]]; then
-# Visula studio code
-brew tap caskroom/cask
-brew search visual-studio-code
-brew cask info visual-studio-code
-brew cask install visual-studio-code
+    # Visula studio code
+    brew tap caskroom/cask
+    brew search visual-studio-code
+    brew cask info visual-studio-code
+    brew cask install visual-studio-code
 fi
 
 # Install VSCode extensions
@@ -17,12 +17,14 @@ fi
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ecmel.vscode-html-css
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension mrmlnc.vscode-scss
+# https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension Zignd.html-css-class-completion
 
 # Javascript
 # https://github.com/kamleshchandnani/vscode-js-extension-pack
 
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension 	PKief.material-icon-theme
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension 	vscode-icons-team.vscode-icons
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension PKief.material-icon-theme
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vscode-icons-team.vscode-icons
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension eg2.vscode-npm-script
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension baeumer.vscode-eslint
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension christian-kohler.npm-intellisense
@@ -39,13 +41,12 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension donjayamanne.githistory
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension gbierner.markdown-preview-github-styles
 
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension 	ms-azuretools.vscode-docker
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension 	aaron-bond.better-comments
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension 	humao.rest-client
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-azuretools.vscode-docker
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension aaron-bond.better-comments
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension humao.rest-client
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension yzhang.markdown-all-in-one
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension christian-kohler.path-intellisense
-
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-vscode-remote.vscode-remote-extensionpack
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension msjsdiag.vscode-react-native
@@ -57,9 +58,6 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vscjava.vscode-java-dependency
 # https://code.visualstudio.com/docs/java/java-tutorial#_coding-pack-for-java
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vscjava.vscode-java-pack
-
-
-
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vsciot-vscode.vscode-arduino
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension hbrok.markdown-preview-bitbucket
@@ -89,29 +87,46 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dave-hagedorn.jenkins-runner
 
 #OpenAPI
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  arjun-g/vs-swagger-viewer
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension arjun-g/vs-swagger-viewer
 
 #Azure
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  ms-vscode.vscode-node-azure-pack
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  vsciot-vscode.azure-iot-toolkit
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  ms-azuretools.vscode-azureterraform
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-vscode.vscode-node-azure-pack
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vsciot-vscode.azure-iot-toolkit
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-azuretools.vscode-azureterraform
 
 # C#
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  ms-dotnettools.csharp
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-dotnettools.csharp
 
 # Json / XML
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  nickdemayo.vscode-json-editor
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  dotjoshjohnson.xml
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension nickdemayo.vscode-json-editor
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dotjoshjohnson.xml
 
 # Bitbucket Pull Requests
 # https://marketplace.visualstudio.com/items?itemName=RamiroBerrelleza.bitbucket-pull-requests
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension RamiroBerrelleza.bitbucket-pull-requests
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension github.vscode-pull-request-github
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  streetsidesoftware.code-spell-checker
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension streetsidesoftware.code-spell-checker
 
 # productivity
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  mikestead.dotenv
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  gitignore
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension  tomoki1207.pdf
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension mikestead.dotenv
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension gitignore
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension tomoki1207.pdf
 
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension foxundermoon.shell-format
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension HookyQR.beautify
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension nobuhito.printcode
 
+# https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension quicktype.quicktype
+
+# Personal Kanban
+# https://marketplace.visualstudio.com/items?itemName=mkloubert.vscode-kanban
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension mkloubert.vscode-kanban
+
+# Gitlab Extension
+# https://marketplace.visualstudio.com/items?itemName=gitlab.gitlab-workflow
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension GitLab.gitlab-workflow
+
+#gitignore
+# https://marketplace.visualstudio.com/items?itemName=rubbersheep.gi
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension rubbersheep.gi
