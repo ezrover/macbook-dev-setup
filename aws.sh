@@ -12,7 +12,8 @@ if test ! $(which aws); then
 
     aws --aws --version
 else 
-    brew upgrade awscli
+    brew reinstall awscli
+    brew unlink awscli && brew link awscli
     aws --aws --version
 fi
 

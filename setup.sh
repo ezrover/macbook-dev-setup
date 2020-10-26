@@ -97,7 +97,6 @@ e_success "Optimization commands"
 
 echo "\r"
 
-
 # ------------------------------------------------------------------------------
 e_pending "Running optimizations"
 # ------------------------------------------------------------------------------
@@ -106,16 +105,11 @@ e_pending "Optimizing Homebrew"
 brew doctor
 brew cleanup
 
-read -p "Re-sort Launchpad applications (Please answer y/n)?  " yn
-case $yn in
-[Yy]*) defaults write com.apple.dock ResetLaunchPad -boolean true;; 
-*) echo "Please answer yes or no." ;;
-esac
-
+defaults write com.apple.dock ResetLaunchPad -boolean true
 killall Dock
 
 e_settled "Installation complete!"
 
 # Make the Homebrew copy of zsh your default shell
-chsh -s /usr/local/bin/zsh
+#chsh -s /usr/local/bin/zsh
 #fi
