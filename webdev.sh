@@ -9,11 +9,14 @@ if test ! $(which npm); then
   # Install npm
   brew install npm
 
+  npm init -y
+  npm install -g -f eslint
   npm install -g coffeescript
   npm install -g grunt-cli
   npm install -g jshint
   npm install -g less
   npm install -g jest
+  npm install -g -f prettier
 
   #functional programming tools for javascript
   # https://monet.github.io/monet.js/
@@ -28,6 +31,7 @@ else
   npm upgrade jshint
   npm upgrade less
   npm upgrade jest
+  npm upgrade prettier
 
   #functional programming tools for javascript
   # https://monet.github.io/monet.js/
@@ -35,13 +39,11 @@ else
 fi
 
 if test ! $(which eslint); then
-  npm init -y
-  npm install --save-dev eslint
 
   if has_command "npm"; then
     e_pending "Installing/Upgrading eslint/airbnb/prettier combo"
     npx install-peerdeps -g eslint-config-airbnb
-    npm i -g prettier@latest eslint-config-prettier@latest eslint-plugin-prettier@latest
+    npm install -f -g prettier eslint-config-prettier eslint-plugin-prettier
     test_command "eslint"
     test_command "prettier"
   fi

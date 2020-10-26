@@ -27,14 +27,14 @@ killall Finder
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
+brew doctor
+brew cleanup
 
 # Step 1: Update the OS and Install Xcode Tools
 echo "------------------------------"
 echo "Updating OSX.  If this requires a restart, run the script again."
 # Install all available updates
-sudo softwareupdate -ia --verbose
-# Install only recommended available updates
-#sudo softwareupdate -ir --verbose
+sudo softwareupdate --all --install --force
 
 #many tools require java preinstalled
 
@@ -43,17 +43,14 @@ if test ! $(which java); then
     # Install Java since most apps require it
   brew tap adoptopenjdk/openjdk
   brew cask install adoptopenjdk
+
+  sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+  echo 'export PATH="/usr/local/opt/openjdk/bin:$PATH"' >> ~/.zshrc
+  export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 else
   brew upgrade --cask adoptopenjdk
 fi
 
-
-if [[ ! -d "/Applications/Xcode.app" ]]; then
-# Install Github Desktop App
-brew install mas
-mas list
-mas install 497799835 # xcode
-fi
 
 echo "------------------------------"
 # Install Xcode command line tools
@@ -86,36 +83,31 @@ if test ! $(which brew); then
     brew update
 
     # Upgrade any already-installed formulae.
-    brew Upgrade
+    brew upgrade
     brew doctor
 fi
 
-declare -a brew_cask_arr=(
-    "box-drive"
-    )
+if [[ ! -d "/Applications/Box.app" ]]; then
+  read -p "Do you wish to install this program (Please answer yes or no)? "$i yn
+  case $yn in
+      [Yy]* ) brew cask install box-drive;;
+      * ) echo "Please answer yes or no.";;
+  esac
+fi
 
-
-for i in "${brew_cask_arr[@]}"
-do
-  if [[ ! -d "/Applications/Box.app" ]]; then
-    read -p "Do you wish to install this program (Please answer yes or no)? "$i yn
-    case $yn in
-        [Yy]* ) brew cask install $i;;
-        [Nn]* ) continue;;
-        * ) echo "Please answer yes or no.";;
-    esac
-  fi
-done
-
-if test ! $(which git); then
-# Install git App
-brew install git
+if test ! $(n); then
+  # Install git App
+  brew install -f -g git
+else
+  brew reinstall git
 fi
 
 
 if test ! $(which git-flow); then
 # Install git-flow
 brew  install git-flow
+else
+  brew upgrade git-flow
 fi
 
 
@@ -124,30 +116,35 @@ if [[ ! -d "/Applications/Github Desktop.app" ]]; then
 brew search github
 brew cask info github
 brew cask install github
+else 
+  brew upgrade github
 fi
 
 
 if [[ ! -d "/Applications/Sourcetree.app" ]]; then
-# Install Sourcetree
-brew search sourcetree
-brew cask info sourcetree
-brew cask install sourcetree
+  # Install Sourcetree
+  brew search sourcetree
+  brew cask info sourcetree
+  brew cask install sourcetree
+else
+  brew upgrade sourcetree
 fi
 
 
 if [[ ! -d "/Applications/Docker.app" ]]; then
-# Install Docker
-brew search docker
-brew cask info docker
-brew cask install docker
-brew cask install docker-compose
+  # Install Docker
+  brew install -g -f docker
+  brew install -g docker-compose
+else
+  brew upgrade docker
+  brew upgrade docker-compose
 fi
 
 if [[ ! -d "/Applications/Slack.app" ]]; then
 # Install Slack
-brew search slack
-brew cask info slack
-brew cask install slack
+brew install -g -f slack
+else
+brew upgrade slack
 fi
 
 if [[ ! -d "/Applications/Google Chrome.app" ]]; then
@@ -169,4 +166,6 @@ if [[ ! -d "/Applications/Postman.app" ]]; then
 brew search postman
 brew cask info postman
 brew cask install postman
+else
+  brew upgrade postman
 fi

@@ -10,6 +10,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^7.11.0"
-  }
+    "eslint": "^7.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezrover/macbook-dev-setup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ezrover/macbook-dev-setup/issues"
+  },
+  "homepage": "https://github.com/ezrover/macbook-dev-setup#readme"
 }

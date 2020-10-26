@@ -9,11 +9,9 @@ fi
 
 if [[ ! -d "/Applications/Android Studio.app" ]]; then
     brew cask install --appdir /Applications android-studio
-    brew cask install android-sdk
     brew cask install android-ndk
 else
     brew upgrade --cask --appdir /Applications android-studio
-    brew upgrade --cask android-sdk
     brew upgrade --cask android-ndk
 fi
 
@@ -25,4 +23,5 @@ else
 fi
 
 echo "export ANDROID_HOME=/usr/local/share/android-sdk" >>~/.zshrc
+echo 'export ANDROID_NDK_HOME="/usr/local/share/android-ndk"'  >>~/.zshrc
 source ~/.zshrc

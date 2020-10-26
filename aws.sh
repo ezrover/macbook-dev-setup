@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 
+# ------------------------------------------------------------------------------
+e_pending "Installing AWS Tools"
+# ------------------------------------------------------------------------------
+
 if test ! $(which aws); then
     # Install AWS SDK
     echo "------------------------------"
     echo "Setting up AWS."
-    brew install awscli
+    brew install -f -g awscli
 
     aws --aws --version
 else 
@@ -32,9 +36,9 @@ elsebrew upgrade terraform
 fi
 
 if test ! $(which awslocal); then
-brew install localstack
+    brew install localstack
 else
-brew upgrade localstack
+    brew reinstall localstack
 fi
 
 if test ! $(which cdk); then
