@@ -66,3 +66,6 @@ if test ! $(which yarn); then
 else
   brew upgrade yarn
 fi
+
+# globally apply esline settings https://www.tracylum.com/blog/2017-12-28-setting-up-eslint-globally/
+yarn global add eslint eslint-config-airbnb eslint-plugin-jsx-a11y@^2.0.0 eslint-plugin-react eslint-plugin-import babel-eslint
