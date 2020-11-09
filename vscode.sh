@@ -130,3 +130,10 @@ fi
 #gitignore
 # https://marketplace.visualstudio.com/items?itemName=rubbersheep.gi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension rubbersheep.gi
+
+# CDK Snippets https://marketplace.visualstudio.com/items?itemName=mklein.cdk-snippets&utm_campaign=CDK%20Weekly&utm_medium=email&utm_source=Revue%20newsletter
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension mklein.cdk-snippets	
+
+
+# Cobalt 2 and Cobalt dark mixed
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dline.cobaltnext

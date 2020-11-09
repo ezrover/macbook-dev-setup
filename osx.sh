@@ -169,3 +169,9 @@ brew cask install postman
 else
   brew upgrade postman
 fi
+
+if [[ ! -d "/Applications/Graphviz.app" ]]; then
+  brew install graphviz
+else
+  brew upgrade graphviz
+fi
