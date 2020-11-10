@@ -137,3 +137,14 @@ fi
 
 # Cobalt 2 and Cobalt dark mixed
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dline.cobaltnext
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension wallabyjs.quokka-vscode
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ritwickdey.liveserver
+
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension pnp.polacode
+
+# https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dsznajder.es7-react-js-snippets	
+
+
+# https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension wix.vscode-import-cost

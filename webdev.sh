@@ -11,6 +11,9 @@ if test ! $(which npm); then
 
   npm init -y
   npm install -g -f eslint
+  npm info "eslint-config-airbnb@latest" peerDependencies
+  npx install-peerdeps -g --dev eslint-config-airbnb
+
   npm install -g coffeescript
   npm install -g grunt-cli
   npm install -g jshint
