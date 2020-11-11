@@ -148,3 +148,8 @@ fi
 
 # https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension wix.vscode-import-cost
+
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension pranaygp.vscode-css-peek
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension naumovs.color-highlight
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension remimarsal.prettier-now
+
