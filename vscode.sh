@@ -153,3 +153,5 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension naumovs.color-highlight
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension remimarsal.prettier-now
 
+# https://marketplace.visualstudio.com/items?itemName=morrislaptop.vscode-open-in-sourcetree
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension morrislaptop.vscode-open-in-sourcetree	

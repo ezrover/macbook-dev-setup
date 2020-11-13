@@ -54,3 +54,7 @@ brew install aws-sam-cli
 else
 brew upgrade aws-sam-cli
 fi
+
+pip3 install cfn-lint
+pip3 install pydot
+
