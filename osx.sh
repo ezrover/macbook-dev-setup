@@ -175,3 +175,10 @@ if [[ ! -d "/Applications/Graphviz.app" ]]; then
 else
   brew upgrade graphviz
 fi
+
+if test ! $(which http); then
+    echo "Installing httpie"
+  brew install httpie
+else
+  brew upgrade httpie
+fi
