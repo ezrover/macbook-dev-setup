@@ -74,8 +74,12 @@ fi
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension AmazonWebServices.aws-toolkit-vscode
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dsteenman.cloudformation-yaml-snippets
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension HashiCorp.terraform
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension kddejong.vscode-cfn-lint
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension aws-amplify/amplify-js
+
+# terraform
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension HashiCorp.terraform
+
 
 # Peer Programming
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extensionMS-vsliveshare.vsliveshare
