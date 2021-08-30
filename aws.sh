@@ -1,8 +1,25 @@
 #!/usr/bin/env bash
 
+source _utils.sh
+
 # ------------------------------------------------------------------------------
 e_pending "Installing AWS Tools"
 # ------------------------------------------------------------------------------
+
+# Install Pre requisits
+xcode-select --install
+
+brew tap homebrew/cask
+brew doctor
+brew update
+brew upgrade
+
+# ------------------------------------------------------------------------------
+e_pending "Ensure Python and Pip are installed"
+# ------------------------------------------------------------------------------
+
+brew install python@3.9
+python3 -m pip install --upgrade pip setuptools wheel
 
 if test ! $(which aws); then
     # Install AWS SDK
@@ -17,6 +34,22 @@ else
     aws --aws --version
 fi
 
+
+# ------------------------------------------------------------------------------
+e_pending "Install local AWS emulator"
+# ------------------------------------------------------------------------------
+
+if test ! $(which awslocal); then
+    brew install localstack
+else
+    brew reinstall localstack
+fi
+
+
+# ------------------------------------------------------------------------------
+e_pending "install and setup gimme-aws-creds"
+# ------------------------------------------------------------------------------
+
 # install and setup gimme-aws-creds
 if test ! $(which gimme-aws-creds); then
 echo "------------------------------"
@@ -30,17 +63,6 @@ else
 gimme-aws-creds upgrade
 fi
 
-if test ! $(which terraform); then
-# Install terraform
-brew install terraform
-elsebrew upgrade terraform
-fi
-
-if test ! $(which awslocal); then
-    brew install localstack
-else
-    brew reinstall localstack
-fi
 
 if test ! $(which cdk); then
 brew install aws-cdk
@@ -54,6 +76,13 @@ brew install aws-sam-cli
 else
 brew upgrade aws-sam-cli
 fi
+
+if test ! $(which amplify); then
+curl -sL https://aws-amplify.github.io/amplify-cli/install | bash && $SHELL
+else
+curl -sL https://aws-amplify.github.io/amplify-cli/install | bash && $SHELL
+fi
+
 
 pip3 install cfn-lint
 pip3 install pydot

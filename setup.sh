@@ -41,6 +41,12 @@ case $yn in
 *) echo "Please answer yes or no." ;;
 esac
 
+read -p "Do you wish to install Terraform Automation (Please answer y/n)?  " yn
+case $yn in
+[Yy]*) source terraform.sh ;;
+*) echo "Please answer yes or no." ;;
+esac
+
 read -p "Do you wish to install AndroidStudio (Please answer y/n)?  " yn
 case $yn in
 [Yy]*) source android.sh ;;

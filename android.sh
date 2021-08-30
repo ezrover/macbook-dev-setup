@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 
+xcode-select --install
+
 brew tap homebrew/cask
+brew doctor
+brew update
+brew upgrade
+
+brew install --cask temurin
 
 if [[ ! -d "/Applications/IntelliJ IDEA CE.app" ]]; then
     # IntelliJ IDEA Ultimate Edition
