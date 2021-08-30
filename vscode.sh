@@ -8,6 +8,9 @@ if [[ ! -d "/Applications/Visual Studio Code.app" ]]; then
     brew cask install visual-studio-code
 fi
 
+# Install firebase extensions
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension toba.vsfire
+
 # Install VSCode extensions
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension felipecaputo.git-project-manager
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension editorconfig.editorconfig
@@ -67,7 +70,6 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension techer.open-in-browser
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension naumovs.theme-oceanicnext
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension kisstkondoros.vscode-codemetrics
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension msjsdiag.debugger-for-chrome
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension kisstkondoros.vscode-gutter-preview
 
 # AWS
@@ -80,10 +82,8 @@ fi
 # terraform
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension HashiCorp.terraform
 
-
 # Peer Programming
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extensionMS-vsliveshare.vsliveshare
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension karigari.chat
 
 # Atlassian Jira and Bitcucket
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension atlassian.atlascode
@@ -122,10 +122,6 @@ fi
 
 # https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension quicktype.quicktype
-
-# Personal Kanban
-# https://marketplace.visualstudio.com/items?itemName=mkloubert.vscode-kanban
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension mkloubert.vscode-kanban
 
 # Gitlab Extension
 # https://marketplace.visualstudio.com/items?itemName=gitlab.gitlab-workflow
