@@ -51,17 +51,17 @@ e_pending "install and setup gimme-aws-creds"
 # ------------------------------------------------------------------------------
 
 # install and setup gimme-aws-creds
-if test ! $(which gimme-aws-creds); then
-echo "------------------------------"
-echo "TODO: Update .aws/ with your AWS credentials and region, or run aws --configure."
-brew install gimme-aws-creds
+# if test ! $(which gimme-aws-creds); then
+# echo "------------------------------"
+# echo "TODO: Update .aws/ with your AWS credentials and region, or run aws --configure."
+# brew install gimme-aws-creds
 
-gimme-aws-creds --action-configure
-gimme-aws-creds --profile work
-echo "Script completed."
-else
-gimme-aws-creds upgrade
-fi
+# gimme-aws-creds --action-configure
+# gimme-aws-creds --profile work
+# echo "Script completed."
+# else
+# gimme-aws-creds upgrade
+# fi
 
 
 if test ! $(which cdk); then
@@ -77,12 +77,11 @@ else
 brew upgrade aws-sam-cli
 fi
 
-if test ! $(which amplify); then
-curl -sL https://aws-amplify.github.io/amplify-cli/install | bash && $SHELL
-else
-curl -sL https://aws-amplify.github.io/amplify-cli/install | bash && $SHELL
-fi
-
+# if test ! $(which amplify); then
+# curl -sL https://aws-amplify.github.io/amplify-cli/install | bash && $SHELL
+# else
+# curl -sL https://aws-amplify.github.io/amplify-cli/install | bash && $SHELL
+# fi
 
 pip3 install cfn-lint
 pip3 install pydot

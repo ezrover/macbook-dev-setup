@@ -28,3 +28,6 @@ Thumbs.db
 
 # Repo scratch directory
 scratch/
+
+#node modules directory
+node_modules/

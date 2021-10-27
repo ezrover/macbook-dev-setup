@@ -11,14 +11,14 @@ brew install --cask temurin
 
 if [[ ! -d "/Applications/IntelliJ IDEA CE.app" ]]; then
     # IntelliJ IDEA Ultimate Edition
-    brew cask install --appdir /Applications intellij-idea-ce
+    brew install --appdir /Applications --cask intellij-idea-ce
 fi
 
 if [[ ! -d "/Applications/Android Studio.app" ]]; then
-    brew cask install --appdir /Applications android-studio
-    brew cask install android-ndk
+    brew install --appdir /Applications --cask android-studio
+    brew install --cask android-ndk
 else
-    brew upgrade --cask --appdir /Applications android-studio
+    brew upgrade --appdir /Applications --cask android-studio
     brew upgrade --cask android-ndk
 fi
 

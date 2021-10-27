@@ -7,8 +7,8 @@ if test ! $(which python); then
 
     brew tap caskroom/cask
     brew search miniconda
-    brew cask info miniconda
-    brew cask install miniconda
+    brew install --cask info miniconda
+    brew install --cask miniconda
     /usr/local/miniconda3/bin/conda install -c cyclus -c conda-forge -y --file conda-req.txt
 
     # Install ruby-build and rbenv
@@ -24,7 +24,7 @@ fi
 
 if [[ ! -d "/Applications/PyCharm CE.app" ]]; then
 brew search pycharm-ce
-brew cask info pycharm-ce
-brew cask install pycharm-ce
+brew install --cask info pycharm-ce
+brew install --cask pycharm-ce
 fi
 

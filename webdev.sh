@@ -9,6 +9,8 @@ if test ! $(which npm); then
   # Install npm
   brew install npm
 
+  npm audit fix
+
   npm init -y
   npm install -g -f eslint
   npm info "eslint-config-airbnb@latest" peerDependencies
@@ -26,6 +28,9 @@ if test ! $(which npm); then
   npm install monet --save
 else
   e_pending "Upgrading npm"
+
+  npm audit fix
+
   npm i -g npm@latest
   test_command "npm"
 
@@ -71,4 +76,4 @@ else
 fi
 
 # globally apply esline settings https://www.tracylum.com/blog/2017-12-28-setting-up-eslint-globally/
-yarn global add eslint eslint-config-airbnb eslint-plugin-jsx-a11y@^2.0.0 eslint-plugin-react eslint-plugin-import babel-eslint
+yarn global add eslint eslint-config-airbnb eslint-plugin-jsx-a11y@^2.0.0 eslint-plugin-react eslint-plugin-import eslint-parser

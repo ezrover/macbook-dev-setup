@@ -6,7 +6,7 @@
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `osx.sh` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+# while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -41,14 +41,13 @@ sudo softwareupdate --all --install --force
 
 if test ! $(which java); then
     # Install Java since most apps require it
-  brew tap adoptopenjdk/openjdk
-  brew cask install adoptopenjdk
+  brew install --cask adoptopenjdk
 
   sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
   echo 'export PATH="/usr/local/opt/openjdk/bin:$PATH"' >> ~/.zshrc
   export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 else
-  brew upgrade --cask adoptopenjdk
+  brew install --cask adoptopenjdk
 fi
 
 # Xcode is Required:
@@ -94,12 +93,8 @@ if test ! $(which brew); then
     brew doctor
 fi
 
-if test ! $(n); then
-  # Install git App
-  brew install -f -g git
-else
-  brew reinstall git
-fi
+
+brew install -f -g git
 
 
 if test ! $(which git-flow); then
@@ -112,52 +107,38 @@ fi
 
 if [[ ! -d "/Applications/Github Desktop.app" ]]; then
 # Install Github Desktop App
-brew search github
-brew cask info github
-brew cask install github
-else 
-  brew upgrade github
+  brew install --cask --appdir="/Applications" github-desktop
+  brew install --cask --appdir="/Applications" github
 fi
 
 
 if [[ ! -d "/Applications/Sourcetree.app" ]]; then
   # Install Sourcetree
-  brew search sourcetree
-  brew cask info sourcetree
-  brew cask install sourcetree
-else
-  brew upgrade sourcetree
+  brew install --cask sourcetree
 fi
 
 
 if [[ ! -d "/Applications/Docker.app" ]]; then
   # Install Docker
-  brew install -g -f docker
-  brew install -g docker-compose
-else
-  brew upgrade docker
-  brew upgrade docker-compose
+  brew install docker
+  brew install docker-compose
 fi
 
 if [[ ! -d "/Applications/Google Chrome.app" ]]; then
-# Install Slack
-brew search google-chrome
-brew cask info google-chrome
-brew cask install google-chrome
+# Install Chrome
+  brew install --cask --appdir="/Applications" google-chrome
 fi
 
 if [[ ! -d "/Applications/Brave Browser.app" ]]; then
-# Install Slack
-brew search brave-browser
-brew cask info brave-browser
-brew cask install brave-browser
+# Install Brave
+brew install --cask brave-browser
 fi
 
 if [[ ! -d "/Applications/Postman.app" ]]; then
 # Install Postman
 brew search postman
-brew cask info postman
-brew cask install postman
+brew install --cask info postman
+brew install --cask postman
 else
   brew upgrade postman
 fi
@@ -174,3 +155,7 @@ if test ! $(which http); then
 else
   brew upgrade httpie
 fi
+
+# cleanup
+brew cleanup -s
+rm -f -r /Library/Caches/Homebrew/*

@@ -4,13 +4,13 @@ if [[ ! -d "/Applications/Visual Studio Code.app" ]]; then
     # Visula studio code
     brew tap caskroom/cask
     brew search visual-studio-code
-    brew cask info visual-studio-code
-    brew cask install visual-studio-code
+    brew install --cask info visual-studio-code
+    brew install --cask visual-studio-code
 fi
 
 
 # Forget Postman, Thunder client does it all
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension rangav.thunder-client-support
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension 	rangav.vscode-thunder-client
 
 # Install firebase extensions
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension toba.vsfire
@@ -24,7 +24,6 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension editorconfig.editorconfig
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-python.python
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension timonwong.shellcheck
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-python.anaconda-extension-pack
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ecmel.vscode-html-css
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension mrmlnc.vscode-scss
@@ -48,7 +47,7 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension Orta.vscode-jest
 
 #Playwright Test automation testing
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension esbenp.ms-playwright.playwright
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-playwright.playwright
 
 #Beautify
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension esbenp.prettier-vscode
@@ -63,7 +62,7 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension eamodio.gitlens
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension donjayamanne.githistory
 
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension gbierner.markdown-preview-github-styles
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension bierner.markdown-preview-github-styles
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension davidanson.vscode-markdownlint
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension hnw.vscode-auto-open-markdown-preview
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension hbrok.markdown-preview-bitbucket
@@ -86,7 +85,6 @@ fi
 # https://code.visualstudio.com/docs/java/java-tutorial#_coding-pack-for-java
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vscjava.vscode-java-pack
 
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vsciot-vscode.vscode-arduino
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension techer.open-in-browser
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension naumovs.theme-oceanicnext
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension kisstkondoros.vscode-codemetrics
@@ -99,7 +97,7 @@ fi
 # /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension aws-amplify/amplify-js
 
 # YAML
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension redhat-developer.vscode-yaml
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension redhat.vscode-yaml
 
 # Json / XML
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension nickdemayo.vscode-json-editor
@@ -132,10 +130,12 @@ fi
 
 # productivity
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension mikestead.dotenv
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension gitignore
+
+#gitignore
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension codezombiech.gitignore
+
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension tomoki1207.pdf
 
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension foxundermoon.shell-format
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension HookyQR.beautify
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension nobuhito.printcode
 
@@ -146,9 +146,6 @@ fi
 # https://marketplace.visualstudio.com/items?itemName=gitlab.gitlab-workflow
 # /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension GitLab.gitlab-workflow
 
-#gitignore
-# https://marketplace.visualstudio.com/items?itemName=rubbersheep.gi
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension rubbersheep.gi
 
 # CDK Snippets https://marketplace.visualstudio.com/items?itemName=mklein.cdk-snippets&utm_campaign=CDK%20Weekly&utm_medium=email&utm_source=Revue%20newsletter
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension mklein.cdk-snippets	
@@ -173,6 +170,6 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension morrislaptop.vscode-open-in-sourcetree	
 
 #OpenAPI
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension arjun-g.vs-swagger-viewer
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension Arjun.swagger-viewer
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension 42crunch.vscode-openapi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension mermade.openapi-lint

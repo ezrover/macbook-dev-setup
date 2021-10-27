@@ -12,7 +12,7 @@ brew tap homebrew/cask
 
 if [[ ! -d "/Applications/DiffMerge.app" ]]; then
   e_pending "Installing diffmerge"
-  brew cask install diffmerge
+  brew install --cask diffmerge
   test_app "DiffMerge"
 else
   brew upgrade diffmerge
@@ -20,7 +20,7 @@ fi
 
 if [[ ! -d "/Applications/iTerm.app" ]]; then
   e_pending "Installing iterm2"
-  brew cask install iterm2
+  brew install --cask iterm2
   test_app "iTerm"
 else
   brew upgrade iterm2
@@ -28,7 +28,7 @@ fi
 
 if [[ ! -d "/Applications/Sketch.app" ]]; then
   e_pending "Installing sketch"
-  brew cask install sketch
+  brew install --cask sketch
   test_app "Sketch"
 else 
   brew upgrade slack
@@ -76,13 +76,8 @@ fi
 
 
 if test ! $(which curl); then
-if has_command "brew"; then
-  if ! has_command "curl"; then
-    e_pending "Installing curl"
-    brew install curl
-    test_command "curl"
-  fi
-fi
+  e_pending "Installing curl"
+  brew install curl
 else
   brew upgrade curl
 fi
@@ -100,15 +95,9 @@ else
 fi
 
 if test ! $(which zsh); then
-if has_command "brew"; then
-  if ! has_command "zsh"; then
-    get_consent "Install zsh"
-    if has_consent; then
-      e_pending "Installing zsh"
-      brew install zsh
-      test_command "zsh"
-    fi
-  fi
+  e_pending "Installing zsh"
+  brew install zsh
+  test_command "zsh"
 else
   brew upgrade zsh
 fi
