@@ -51,6 +51,13 @@ else
   brew upgrade --cask adoptopenjdk
 fi
 
+# Xcode is Required:
+if [[ ! -d "/Applications/Xcode.app" ]]; then
+    # Install Xcode App
+    brew install mas
+    mas list
+    mas install 497799835 # xcode
+fi
 
 echo "------------------------------"
 # Install Xcode command line tools
@@ -85,14 +92,6 @@ if test ! $(which brew); then
     # Upgrade any already-installed formulae.
     brew upgrade
     brew doctor
-fi
-
-if [[ ! -d "/Applications/Box.app" ]]; then
-  read -p "Do you wish to install this program (Please answer yes or no)? "$i yn
-  case $yn in
-      [Yy]* ) brew cask install box-drive;;
-      * ) echo "Please answer yes or no.";;
-  esac
 fi
 
 if test ! $(n); then
@@ -138,13 +137,6 @@ if [[ ! -d "/Applications/Docker.app" ]]; then
 else
   brew upgrade docker
   brew upgrade docker-compose
-fi
-
-if [[ ! -d "/Applications/Slack.app" ]]; then
-# Install Slack
-brew install -g -f slack
-else
-brew upgrade slack
 fi
 
 if [[ ! -d "/Applications/Google Chrome.app" ]]; then

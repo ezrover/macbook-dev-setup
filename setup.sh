@@ -12,16 +12,12 @@ while true; do
     kill -0 "$$" || exit
 done 2>/dev/null &
 
+# Setup Mac
 source osx.sh
 
-# Required:
+# Visula studio code is mandatory
+source vscode.sh
 
-if [[ ! -d "/Applications/Xcode.app" ]]; then
-    # Install Xcode App
-    brew install mas
-    mas list
-    mas install 497799835 # xcode
-fi
 
 read -p "Do you wish to install Web Development Tools (Please answer y/n)?  " yn
 case $yn in
@@ -41,9 +37,21 @@ case $yn in
 *) echo "Please answer yes or no." ;;
 esac
 
+read -p "Do you wish to install Kubernetes CLI (Please answer y/n)?  " yn
+case $yn in
+[Yy]*) source kubernetes.sh ;;
+*) echo "Please answer yes or no." ;;
+esac
+
 read -p "Do you wish to install Terraform Automation (Please answer y/n)?  " yn
 case $yn in
 [Yy]*) source terraform.sh ;;
+*) echo "Please answer yes or no." ;;
+esac
+
+read -p "Do you wish to install Slack (Please answer y/n)?  " yn
+case $yn in
+[Yy]*) brew install -g -f slack;;
 *) echo "Please answer yes or no." ;;
 esac
 
@@ -58,11 +66,6 @@ case $yn in
 [Yy]*) source go.sh ;;
 *) echo "Please answer yes or no." ;;
 esac
-
-if [[ ! -d "/Applications/Visual Studio Code.app" ]]; then
-    # Visula studio code
-  source vscode.sh
-fi
 
 read -p "Do you wish to change OSX Preferences (Please answer y/n)?  " yn
 case $yn in

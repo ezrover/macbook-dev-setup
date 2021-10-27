@@ -18,6 +18,9 @@ if test ! $(which terraform); then
     brew install hashicorp/tap/terraform
     terraform -install-autocomplete
 
+    # Install terraform VSCode extensions
+    /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension HashiCorp.terraform
+
 else 
     brew update
     brew tap hashicorp/tap

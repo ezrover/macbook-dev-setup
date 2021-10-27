@@ -8,8 +8,16 @@ if [[ ! -d "/Applications/Visual Studio Code.app" ]]; then
     brew cask install visual-studio-code
 fi
 
+
+# Forget Postman, Thunder client does it all
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension rangav.thunder-client-support
+
 # Install firebase extensions
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension toba.vsfire
+
+# Install Gitlabl extensions
+# https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension GitLab.gitlab-workflow
 
 # Install VSCode extensions
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension felipecaputo.git-project-manager
@@ -29,11 +37,23 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension PKief.material-icon-theme
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vscode-icons-team.vscode-icons
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension eg2.vscode-npm-script
+
+#ESLint
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dbaeumer.vscode-eslint
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dbaeumer.jshint
+
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension christian-kohler.npm-intellisense
+
+#Facebook Jest for Javascript Unit and Integration Testing
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension Orta.vscode-jest
+
+#Playwright Test automation testing
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension esbenp.ms-playwright.playwright
+
+#Beautify
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension esbenp.prettier-vscode
+
+#GraphQL
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension GraphQL.vscode-graphql
 
 # https://github.com/auchenberg/vscode-browser-preview
@@ -73,41 +93,40 @@ fi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension kisstkondoros.vscode-gutter-preview
 
 # AWS
-
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension AmazonWebServices.aws-toolkit-vscode
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dsteenman.cloudformation-yaml-snippets
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension kddejong.vscode-cfn-lint
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension aws-amplify/amplify-js
+# /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension aws-amplify/amplify-js
 
-# terraform
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension HashiCorp.terraform
-
-# Peer Programming
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extensionMS-vsliveshare.vsliveshare
-
-# Atlassian Jira and Bitcucket
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension atlassian.atlascode
-
-#Jenkins Pipelines
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension janjoerke.jenkins-pipeline-linter-connector
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension jenkinsxio.vscode-jx-tools
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dave-hagedorn.jenkins-runner
-
-#Azure
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-vscode.vscode-node-azure-pack
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vsciot-vscode.azure-iot-toolkit
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-azuretools.vscode-azureterraform
-
-# C#
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-dotnettools.csharp
+# YAML
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension redhat-developer.vscode-yaml
 
 # Json / XML
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension nickdemayo.vscode-json-editor
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dotjoshjohnson.xml
 
+# Peer Programming
+# /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extensionMS-vsliveshare.vsliveshare
+
+# Atlassian Jira and Bitcucket
+# /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension atlassian.atlascode
+
+#Jenkins Pipelines
+# /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension janjoerke.jenkins-pipeline-linter-connector
+# /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension jenkinsxio.vscode-jx-tools
+# /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dave-hagedorn.jenkins-runner
+
+#Azure
+# /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-vscode.vscode-node-azure-pack
+# /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vsciot-vscode.azure-iot-toolkit
+# /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-azuretools.vscode-azureterraform
+
+# C#
+# /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ms-dotnettools.csharp
+
 # Bitbucket Pull Requests
 # https://marketplace.visualstudio.com/items?itemName=RamiroBerrelleza.bitbucket-pull-requests
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension RamiroBerrelleza.bitbucket-pull-requests
+# /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension RamiroBerrelleza.bitbucket-pull-requests
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension github.vscode-pull-request-github
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension streetsidesoftware.code-spell-checker
 
@@ -125,7 +144,7 @@ fi
 
 # Gitlab Extension
 # https://marketplace.visualstudio.com/items?itemName=gitlab.gitlab-workflow
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension GitLab.gitlab-workflow
+# /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension GitLab.gitlab-workflow
 
 #gitignore
 # https://marketplace.visualstudio.com/items?itemName=rubbersheep.gi
@@ -134,12 +153,9 @@ fi
 # CDK Snippets https://marketplace.visualstudio.com/items?itemName=mklein.cdk-snippets&utm_campaign=CDK%20Weekly&utm_medium=email&utm_source=Revue%20newsletter
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension mklein.cdk-snippets	
 
-
 # Cobalt 2 and Cobalt dark mixed
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dline.cobaltnext
-
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension ritwickdey.liveserver
-
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension pnp.polacode
 
 # https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
@@ -156,8 +172,7 @@ fi
 # https://marketplace.visualstudio.com/items?itemName=morrislaptop.vscode-open-in-sourcetree
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension morrislaptop.vscode-open-in-sourcetree	
 
-
 #OpenAPI
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension arjun-g/vs-swagger-viewer
+/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension arjun-g.vs-swagger-viewer
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension 42crunch.vscode-openapi
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension mermade.openapi-lint
