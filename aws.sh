@@ -51,10 +51,12 @@ e_pending "install and setup gimme-aws-creds"
 # ------------------------------------------------------------------------------
 
 # install and setup gimme-aws-creds
-# if test ! $(which gimme-aws-creds); then
-# echo "------------------------------"
-# echo "TODO: Update .aws/ with your AWS credentials and region, or run aws --configure."
-# brew install gimme-aws-creds
+if test ! $(which gimme-aws-creds); then
+echo "------------------------------"
+echo "TODO: Update .aws/ with your AWS credentials and region, or run aws --configure."
+brew install gimme-aws-creds
+
+echo "TODO: Update .aws/ with your AWS credentials and region, or run aws --configure."
 
 # gimme-aws-creds --action-configure
 # gimme-aws-creds --profile work
