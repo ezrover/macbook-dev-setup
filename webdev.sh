@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-if test ! $(which node); then
-  # Install npm
-  brew install node
-fi
-
 if test ! $(which npm); then
   # Install npm
   brew install npm
@@ -72,7 +67,7 @@ if test ! $(which yarn); then
   brew install yarn
   test_command "yarn"
 else
-  brew upgrade yarn
+  brew reinstall yarn
 fi
 
 # globally apply esline settings https://www.tracylum.com/blog/2017-12-28-setting-up-eslint-globally/

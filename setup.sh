@@ -12,12 +12,28 @@ while true; do
     kill -0 "$$" || exit
 done 2>/dev/null &
 
+# install homebrew https://brew.sh/
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew tap homebrew/cask
+
+# node is a prerequisite for many tools
+brew uninstall node
+brew prune
+#gatsby requires node 14.x
+brew install node@14
+
+brew doctor
+brew Update
+brew cleanup
+
+which node
+
 # Setup Mac
 source osx.sh
 
 # Visula studio code is mandatory
 source vscode.sh
-
 
 read -p "Do you wish to install Web Development Tools (Please answer y/n)?  " yn
 case $yn in

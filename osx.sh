@@ -27,8 +27,6 @@ killall Finder
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-brew doctor
-brew cleanup
 
 # Step 1: Update the OS and Install Xcode Tools
 echo "------------------------------"

@@ -6,13 +6,14 @@ source _utils.sh
 e_pending "Installing AWS Tools"
 # ------------------------------------------------------------------------------
 
+brew cleanup
+brew doctor
+
+
 # Install Pre requisits
 xcode-select --install
 
-brew tap homebrew/cask
-brew doctor
-brew update
-brew upgrade
+echo 'Inspect the results of brew doctor then press any key to continue...'; read -k1 -s
 
 # ------------------------------------------------------------------------------
 e_pending "Ensure Python and Pip are installed"
@@ -69,14 +70,14 @@ echo "TODO: Update .aws/ with your AWS credentials and region, or run aws --conf
 if test ! $(which cdk); then
 brew install aws-cdk
 else
-brew upgrade aws-cdk
+brew reinstall aws-cdk
 fi
 
 if test ! $(which sam); then
 brew tap aws/tap
 brew install aws-sam-cli
 else
-brew upgrade aws-sam-cli
+brew reinstall aws-sam-cli
 fi
 
 # if test ! $(which amplify); then
