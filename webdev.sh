@@ -72,3 +72,15 @@ fi
 
 # globally apply esline settings https://www.tracylum.com/blog/2017-12-28-setting-up-eslint-globally/
 yarn global add eslint eslint-config-airbnb eslint-plugin-jsx-a11y@^2.0.0 eslint-plugin-react eslint-plugin-import eslint-parser
+
+read -p "Do you wish to Lando for Drupal9 local development (Please answer y/n)?  " yn
+case $yn in
+[Yy]*) brew install --cask lando ;;
+*) echo "Please answer yes or no." ;;
+esac
+
+read -p "Do you wish to Docksal for Drupal9 local development (Please answer y/n)?  " yn
+case $yn in
+[Yy]*) DOCKER_NATIVE=1 bash <(curl -fsSL https://get.docksal.io) ;;
+*) echo "Please answer yes or no." ;;
+esac

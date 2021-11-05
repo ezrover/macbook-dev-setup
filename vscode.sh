@@ -34,7 +34,6 @@ fi
 # https://github.com/kamleshchandnani/vscode-js-extension-pack
 
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension PKief.material-icon-theme
-/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension vscode-icons-team.vscode-icons
 /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension eg2.vscode-npm-script
 
 #ESLint
