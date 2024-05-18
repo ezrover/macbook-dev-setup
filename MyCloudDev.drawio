@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-18T20:15:05.142Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="rSJcfUe0_xlthXiHduZc" version="24.4.4" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-18T20:32:57.556Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="HuQUAn7sJZ2SWNK54_j5" version="24.4.4" type="github">
   <diagram name="Page-1" id="5y6IGtCHfefg0UG6-Cvr">
     <mxGraphModel dx="2109" dy="816" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -62,6 +62,21 @@
               <mxPoint x="800" y="369" />
               <mxPoint x="800" y="156" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JIDA0Lga-9D9GwtFfnP9-22" value="Clerk.com Auth" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.polygon;polyCoords=[[0.25,0],[0.75,0],[1,0.25],[1,0.75],[0.75,1],[0.25,1],[0,0.75],[0,0.25]];polyline=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="80" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JIDA0Lga-9D9GwtFfnP9-23" value="Auth" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="470" y="95" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JIDA0Lga-9D9GwtFfnP9-24" value="Backup" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=default;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="JIDA0Lga-9D9GwtFfnP9-23" target="JIDA0Lga-9D9GwtFfnP9-19">
+          <mxGeometry x="-0.25" y="20" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="120" />
+              <mxPoint x="580" y="120" />
+            </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
